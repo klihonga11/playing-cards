@@ -1,4 +1,4 @@
-export class Card {
+class Card {
     constructor(number, type, canFinish = true, canStart = true) {
         this.number = number;
         this.type = type;
@@ -7,7 +7,7 @@ export class Card {
     }
 }
 
-export class Ace extends Card {
+class Ace extends Card {
     constructor(type) {
         super(1, type, false, false);
     }
@@ -17,7 +17,7 @@ export class Ace extends Card {
     }
 }
 
-export class Two extends Card {
+class Two extends Card {
     constructor(type) {
         super(2, type, false, false);
     }
@@ -27,7 +27,7 @@ export class Two extends Card {
     }
 }
 
-export class Reverse extends Card {
+class Reverse extends Card {
     constructor(type) {
         super(8, type, false);
     }
@@ -37,7 +37,7 @@ export class Reverse extends Card {
     }
 }
 
-export class Jack extends Card {
+class Jack extends Card {
     constructor(type) {
         super(13, type, false, false);
     }
@@ -48,7 +48,7 @@ export class Jack extends Card {
     }
 }
 
-export class Joker extends Card {
+class Joker extends Card {
     constructor(type) {
         super(14, type, false, false);
     }
@@ -57,3 +57,5 @@ export class Joker extends Card {
         
     }
 }
+
+module.exports = { Card, Ace, Two, Reverse, Jack, Joker };
